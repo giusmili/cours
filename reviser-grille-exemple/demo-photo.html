@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Démo photo</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+	<style>
+		body{
+				font: 16px sans-serif;
+			}
+			h1,h2,h3{
+				text-align: center;
+				font-weight: 100;
+			}
+		.picture>a{
+			text-decoration: none;
+			color: #fff;
+			display: block;
+			
+			background: rgba(189, 195, 199, 0.5);
+			line-height: 13.5rem;/*216*/
+			text-align: center;
+			-webkit-transition: 0.5s ease-in-out;
+			-o-transition: 0.5s ease-in-out;
+			transition: 0.5s ease-in-out;
+
+		}
+	
+
+		.picture{
+			background: url(image/00.jpg)center center no-repeat scroll;
+			background-size: cover;
+			width: 200px;	
+			height: 200px;
+			margin:0 auto;
+			border:solid 1px #ccc;
+			overflow: hidden;
+			-webkit-transform: translateX(-600px);
+			-ms-transform: translateX(-600px);
+			-o-transform: translateX(-600px);
+			transform: translateX(-600px);
+				-webkit-transition: 0.9s ease-in-out;
+			-o-transition: 0.9s ease-in-out;
+			transition: 0.9s ease-in-out;
+			opacity:0;
+		
+		}
+		.title-primary{
+			-webkit-transform: translateX(600px);
+			-ms-transform: translateX(600px);
+			-o-transform: translateX(600px);
+			transform: translateX(600px);
+				-webkit-transition: 0.9s ease-in-out;
+			-o-transition: 0.9s ease-in-out;
+			transition: 0.9s ease-in-out;
+			opacity:0;
+		}
+		.picture:hover a{
+			opacity: 0.3;
+		}
+		.picture-speed,.title-speed{
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			-o-transform: translateX(0);
+			transform: translateX(0);
+			opacity: 1;
+		}
+
+	</style>
+	<h1 class="title-primary">Démo photo</h1>
+	<div class="picture">
+		<a href="#">
+			<i class="fa fa-camera fa-3x" aria-hidden="true"></i>
+		</a>
+	</div>
+	<script>
+	(function(){
+
+		var picture=document.querySelector('.picture');
+		var title=document.querySelector('.title-primary');
+		picture.classList.add('picture-speed');
+		title.classList.add('picture-speed');
+	})();
+		
+	</script>
+</body>
+</html>
